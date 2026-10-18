@@ -49,6 +49,7 @@ h2 i{font-style:normal;color:var(--pink)}
 .btn-outline{background:transparent;border:1.5px solid currentColor}
 .card-simple{background:#fff;border:2px solid #111;border-radius:20px;padding:25px;margin-bottom:15px}
 .request-note{display:inline-flex;align-items:center;gap:6px;background:#222;color:#fff;padding:8px 14px;border-radius:100px;font-size:11px;margin-top:14px;border:1px dashed #444}
+.request-note-light{background:#f5f5f5;color:#111;border:1px dashed #111}
 footer{background:#111;color:#666;text-align:center;padding:40px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
 footer strong{color:#fff}
 @media(max-width:800px){
@@ -63,12 +64,13 @@ footer strong{color:#fff}
 
 <header>
 <div class="hero">
+<div class="top-badge"><span>●</span> Available for Graphic Design Internship</div>
 <h1>Apeksha<br><em>Shetkar.</em></h1>
-<p class="hero-sub">Electronics & Computer Engineering Student → Full-Stack Developer → Graphic Designer.</p>
+<p class="hero-sub">Electronics & Computer Engineering Student → Full-Stack Developer → Graphic Designer who builds secure & beautiful products.</p>
 <nav>
 <a href="#projects">Projects</a>
 <a href="#about">About</a>
-<a href="#certifications">Certs</a>
+<a href="#certs">Certs</a>
 <a href="#contact">Contact</a>
 </nav>
 </div>
@@ -78,18 +80,19 @@ footer strong{color:#fff}
 <h2>About <i>Me.</i></h2>
 <div class="about-grid">
 <div class="about-text">
-<p>I am an Electronics and Computer Engineering student with hands‑on experience as a Full‑Stack Developer and Industrial Systems Engineering Intern at Mormugao Port Authority. My background spans building scalable web applications and applying modern frameworks like React.js, Node.js, MongoDB. I have a strong interest in cybersecurity and ethical hacking.</p>
-<p style="margin-top:15px">Beyond development, >I have hands-on experience in Graphic Design and UI/UX. My focus is on making technology more human, intuitive, and visually compelling — merging my engineering background with design thinking..</p>
-<p style="margin-top:15px">I thrive on bridging hardware and software, from FPGA programming to full‑stack deployment, while exploring how AI/ML and good design can shape smarter, safer systems.</p>
+<p>I am an Electronics and Computer Engineering student with hands‑on experience as a Full‑Stack Developer and Industrial Systems Engineering Intern at Mormugao Port Authority. My background spans building scalable web applications and applying modern frameworks such as React.js, Node.js, and MongoDB.</p>
+<p style="margin-top:15px">I have hands-on experience in Graphic Design and UI/UX, with practical work in branding, poster design, social media creatives, and interface design using Figma, Adobe Illustrator, Photoshop, and Canva. My focus is on making technology more human, intuitive, and visually compelling — merging my engineering background with design thinking.</p>
+<p style="margin-top:15px">I also have a strong interest in cybersecurity and ethical hacking, backed by NPTEL certification.</p>
 </div>
 <div class="skill-box">
 <h4>Tools & Stack</h4>
 <div>
-<span class="pill">Figma</span><span>Adobe Illustrator</span><span class="pill">Photoshop</span>
-<span>Canva</span><span>UI/UX</span><span>Branding</span><span>Social Media Design</span><span>Poster Design</span>
+<span class="pill">Figma</span><span class="pill">Photoshop</span><span class="pill">Illustrator</span><span class="pill">Canva</span>
 <span class="pill">React.js</span><span class="pill">Node.js</span><span class="pill">MongoDB</span>
-<span class="pill">Python</span>
+<span class="pill">Python</span><span class="pill">Java</span><span class="pill">PHP</span>
+<span class="pill">UI/UX</span><span class="pill">Ethical Hacking</span>
 </div>
+<p style="margin-top:20px;font-size:12px;opacity:0.6">Looking for Graphic Design Internship where I can bring my tech + design mindset.</p>
 </div>
 </div>
 </section>
@@ -98,33 +101,28 @@ footer strong{color:#fff}
 <h2>Projects <i>— Selected Works</i></h2>
 <div class="project-grid">
 
-<!-- PIMSync - Kilowott -->
 <div class="project">
 <span class="badge badge-hack">🏆 Kilowott Goa Hackathon Project</span>
 <h3>PIMSync</h3>
-<p>Built during <b>Kilowott Goa Hackathon</b> — Personal Information Management Sync platform centralizing contacts, tasks & calendars with secure cross-device sync, conflict resolution & offline-first support.</p>
-<p style="font-size:12px;margin-top:10px;opacity:0.8"><b>Python • Privacy-Focused • Offline-First</b><br>• Bidirectional sync • Conflict detection • Modular adapters • 24hr sprint</p>
+<p>Built during <b>Kilowott Goa Hackathon</b> — Personal Information Management Sync platform centralizing contacts, tasks & calendars with secure cross-device sync, conflict resolution & offline-first support. Privacy-focused alternative to cloud PIMs.</p>
+<p style="font-size:12px;margin-top:10px;opacity:0.8"><b>Python • Sync Engine • Privacy-Focused</b><br>• Bidirectional sync<br>• Conflict detection & resolution<br>• Modular adapter architecture<br>• 24hr hackathon sprint</p>
 <a href="https://github.com/apekshashetkar/pimsync" target="_blank" class="btn btn-black">View on GitHub →</a>
 </div>
 
-<!-- MPA - Code on Request -->
 <div class="project">
-<span class="badge badge-light">Internship Project • MPA Goa</span>
+<span class="badge badge-light">Internship Project</span>
 <h3>MPA Complaint Portal</h3>
 <p>Full-stack complaint management system using React.js, Node.js, Express.js, and MongoDB for Mormugao Port Authority.</p>
-<p style="font-size:11px;margin-top:10px;opacity:0.7">Role: Frontend & Database • Team Project</p>
-<div class="request-note">🔒 Code available on request - Collaborative Internship Project</div>
-<p style="font-size:11px;margin-top:10px;opacity:0.6">Contact me for code walkthrough / demo</p>
+<div class="request-note">🔒 Code available only on request</div>
+<p style="font-size:11px;margin-top:10px;opacity:0.6">Collaborative | Frontend & DB | Contact for walkthrough</p>
 </div>
 
-<!-- Railway - Code on Request -->
 <div class="project">
 <span class="badge badge-dark">Academic Project</span>
 <h3>Railway Management System</h3>
 <p>Java + MySQL project for managing railway bookings and schedules with clean UI & integration.</p>
-<p style="font-size:11px;margin-top:10px;opacity:0.6">Second Year • UI & Integration • Team Project</p>
-<div class="request-note" style="background:#f5f5f5;color:#111;border-color:#111">🔒 Code available on request - Team Academic Project</div>
-<p style="font-size:11px;margin-top:10px;opacity:0.6">Contact me for code walkthrough / demo</p>
+<div class="request-note request-note-light">🔒 Code available only on request</div>
+<p style="font-size:11px;margin-top:10px;opacity:0.6">Second Year | Team Academic Project | Contact for walkthrough</p>
 </div>
 
 <div class="project">
@@ -138,29 +136,29 @@ footer strong{color:#fff}
 <div class="project">
 <span class="badge badge-light">🚀 Final Year Project - In Progress</span>
 <h3>Intelligent Passive Drone Detection using SDR and AI</h3>
-<p>Passive detection & tracking of unauthorized drones using SDR & AI. Captures RF signals, telemetry & control links to identify & localize drones without active emission.</p>
-<p style="font-size:12px;margin-top:10px"><b>Tech:</b> SDR, Python, AI/ML, DSP, GNU Radio, TensorFlow</p>
+<p>Passive detection & tracking of unauthorized drones using SDR & AI. Captures RF signals, telemetry & control links to identify & localize drones without active emission. RF spectrogram analysis + AI drone fingerprinting.</p>
+<p style="font-size:12px;margin-top:10px"><b>Tech:</b> SDR (RTL-SDR / HackRF), Python, AI/ML, DSP, GNU Radio, TensorFlow, RF Signal Processing</p>
 </div>
 
 </div>
 </section>
 
-<section id="certifications">
+<section id="certs">
 <h2>Certs <i>& Internships</i></h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
 <div class="card-simple">
 <h4 style="font-family:'Syne';margin-bottom:10px">Certifications</h4>
-<ul style="margin-left:18px;font-size:14px">
+<ul style="margin-left:18px;font-size:14px;line-height:1.8">
 <li><a href="certificates/ethical-hacking.pdf" target="_blank">NPTEL: Ethical Hacking</a></li>
-<li><a href="./certificates/AI IN HUMAN RESOURCE.pdf" target="_blank">NPTEL: AI in Human Resource Management</a></li>
+<li><a href="./certificates/AI IN HUMAN RESOURCE.pdf" target="_blank">NPTEL: AI in HRM</a></li>
 <li><a href="./certificates/WEB-TECH-PCCE.jpg" target="_blank">Web Technology – PCCE</a></li>
 <li><a href="./certificates/Full-Stack-Software-Developer-Industrial-Systems-MPA-GOA.jpg" target="_blank">Full-Stack Developer (MPA GOA)</a></li>
 </ul>
 </div>
 <div class="card-simple">
-<h4 style="font-family:'Syne';margin-bottom:10px">Internships</h4>
-<p style="font-size:14px"><b>Full Stack Developer - MPA Goa</b><br><span style="font-size:12px;color:#666">Aug-Sep 2026</span></p>
-<p style="font-size:14px;margin-top:15px"><b>AI for Sustainability - 1M1B / IBM</b><br><span style="font-size:12px;color:#666">Aug 2026 - Present</span></p>
+<h4 style="font-family:'Syne';margin-bottom:15px">Internships</h4>
+<p style="font-size:15px"><b>Full Stack Developer - MPA Goa</b><br><span style="font-size:13px;color:#666">Aug-Sep 2026</span><br><a href="./certificates/MPA-GOA-INTERNSHIP.jpg" target="_blank" style="font-size:12px">Certificate →</a></p>
+<p style="font-size:15px;margin-top:18px"><b>AI for Sustainability - 1M1B / IBM</b><br><span style="font-size:13px;color:#666">Aug 2026 - Present</span><br><a href="./certificates/1M1B-AI-Sustainability-Internship.pdf" target="_blank" style="font-size:12px">Offer Letter →</a></p>
 </div>
 </div>
 </section>
@@ -168,7 +166,7 @@ footer strong{color:#fff}
 <section id="contact">
 <h2>Contact <i>— Let's Talk</i></h2>
 <div class="card-simple" style="background:#111;color:#fff;border:none">
-<p>Email: <a href="mailto:11.apeksha@gmail.com" style="color:#FFE135">11.apeksha@gmail.com</a></p>
+<p>Email: <a href="mailto:11.apeksha@gmail.com" style="color:var(--yellow)">11.apeksha@gmail.com</a></p>
 <p>LinkedIn: <a href="https://www.linkedin.com/in/apeksha-shetkar88" target="_blank" style="color:#fff">linkedin.com/in/apeksha-shetkar88</a></p>
 <p>GitHub: <a href="https://github.com/apekshashetkar" target="_blank" style="color:#fff">github.com/apekshashetkar</a></p>
 <a href="./Resume.pdf" download class="btn btn-white" style="margin-top:15px">Download Resume ↓</a>
@@ -176,8 +174,8 @@ footer strong{color:#fff}
 </section>
 
 <footer>
-<p><strong>Apeksha Shetkar</strong> — Designer + Developer</p>
-<p style="margin-top:8px">© 2026 • Designed with intent</p>
+<p><strong>Apeksha Shetkar</strong> — Graphic Designer + Developer + Cybersecurity</p>
+<p style="margin-top:8px">© 2026 • Designed with intent • Built with code</p>
 </footer>
 
 </body>
