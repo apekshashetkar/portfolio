@@ -1,152 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apeksha Shetkar | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f4f4; color: #333;
-    }
-    header {
-      background: #2c3e50; color: #fff;
-      padding: 20px; text-align: center;
-    }
-    nav a {
-      margin: 0 15px; color: #fff;
-      text-decoration: none; font-weight: bold;
-    }
-    section {
-      padding: 40px; max-width: 900px;
-      margin: auto;
-    }
-    h2 { color: #2c3e50; }
-    .project {
-      background: #fff; padding: 20px;
-      margin-bottom: 20px; border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #2c3e50; color: #fff;
-      text-align: center; padding: 15px;
-    }
-    .btn {
-      display: inline-block; padding: 10px 20px;
-      background: #3498db; color: #fff;
-      text-decoration: none; border-radius: 5px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apeksha Shetkar | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#FFFBF5;color:#1a1a1a}
+:root{--black:#111;--pink:#FF4E88;--violet:#7C3AED;--yellow:#FFE135;--green:#00D09C}
+
+/* HEADER - Graphic Designer Style */
+header{background:var(--black);color:#fff;padding:60px 20px 80px 20px;position:relative;overflow:hidden}
+header::after{content:'';position:absolute;right:-100px;top:-100px;width:400px;height:400px;background:radial-gradient(circle,var(--violet) 0%,transparent 70%);opacity:0.5}
+header::before{content:'';position:absolute;left:-50px;bottom:-100px;width:350px;height:350px;background:radial-gradient(circle,var(--pink) 0%,transparent 70%);opacity:0.4}
+.hero{max-width:1100px;margin:auto;position:relative;z-index:2}
+.top-badge{display:inline-block;border:1px solid #333;background:#1e1e1e;padding:6px 14px;border-radius:100px;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.top-badge span{color:var(--yellow)}
+.hero h1{font-family:'Syne',sans-serif;font-size:72px;font-weight:800;line-height:0.85;margin:25px 0;letter-spacing:-2px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--yellow),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:18px;opacity:0.8;max-width:500px;line-height:1.5}
+nav{margin-top:30px;display:flex;gap:8px;flex-wrap:wrap}
+nav a{border:1px solid #333;padding:8px 16px;border-radius:100px;color:#fff;text-decoration:none;font-size:12px;letter-spacing:1px;text-transform:uppercase;transition:0.2s}
+nav a:hover{background:#fff;color:#000}
+
+/* SECTIONS */
+section{padding:70px 20px;max-width:1100px;margin:auto}
+h2{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;letter-spacing:-1px;margin-bottom:35px}
+h2 i{font-style:normal;color:var(--pink)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px}
+.about-text{font-size:16px;line-height:1.8;color:#333}
+.skill-box{background:var(--black);color:#fff;padding:25px;border-radius:20px}
+.skill-box h4{font-family:'Syne',sans-serif;margin-bottom:15px}
+.pill{display:inline-block;padding:6px 12px;border-radius:100px;font-size:11px;margin:4px;background:#222;color:#fff;border:1px solid #333}
+
+/* PROJECTS - Bento Box Style like Designer */
+.project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.project{border-radius:24px;padding:28px;position:relative;overflow:hidden;transition:0.3s}
+.project:hover{transform:translateY(-4px)}
+.project h3{font-family:'Syne',sans-serif;font-size:22px;margin-bottom:10px}
+.project p{font-size:14px;line-height:1.6}
+.project:nth-child(1){grid-column:span 7;background:#FFE135;color:#111}
+.project:nth-child(2){grid-column:span 5;background:#111;color:#fff}
+.project:nth-child(3){grid-column:span 5;background:#fff;border:2px solid #111;color:#111}
+.project:nth-child(4){grid-column:span 7;background:linear-gradient(135deg,#7C3AED,#FF4E88);color:#fff}
+.project:nth-child(5){grid-column:span 12;background:#00D09C;color:#111}
+
+.badge{display:inline-block;padding:4px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.5px;margin-bottom:12px;text-transform:uppercase}
+.badge-dark{background:#111;color:#fff}
+.badge-light{background:#fff;color:#111;border:1px solid #111}
+.badge-hack{background:#0a66c2;color:white}
+
+.btn{padding:10px 18px;border-radius:100px;border:none;font-weight:600;cursor:pointer;font-size:12px;display:inline-block;text-decoration:none;margin-top:14px;margin-right:6px}
+.btn-black{background:#111;color:#fff}
+.btn-white{background:#fff;color:#111}
+.btn-outline{background:transparent;border:1.5px solid currentColor}
+
+/* OTHER SECTIONS */
+.card-simple{background:#fff;border:2px solid #111;border-radius:20px;padding:25px;margin-bottom:15px}
+footer{background:#111;color:#666;text-align:center;padding:40px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+footer strong{color:#fff}
+
+@media(max-width:800px){
+.hero h1{font-size:44px}
+.about-grid{grid-template-columns:1fr}
+.project-grid{grid-template-columns:1fr}
+.project:nth-child(n){grid-column:span 1}
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Apeksha Shetkar</h1>
-    <p>Electronics & Computer Engineering Student | Full-Stack Developer | Cybersecurity Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am an Electronics and Computer Engineering student with hands‑on experience as a Full‑Stack Developer and Industrial Systems Engineering Intern at Mormugao Port Authority. My background spans building scalable web applications, integrating industrial technologies, and applying modern frameworks such as React.js, Node.js, and MongoDB.</p>
-    <p>Beyond development, I have a strong interest in cybersecurity and ethical hacking, backed by NPTEL certification and practical exposure to networking tools and simulations. This dual focus — creating robust applications and ensuring their security — allows me to deliver solutions that are both innovative and resilient.</p>
-    <p>I thrive on bridging hardware and software concepts, from FPGA and microcontroller programming to full‑stack deployment, while continuously exploring how AI/ML and security practices can shape smarter, safer systems.</p>
-  </section>
+<header>
+<div class="hero">
+<div class="top-badge"><span>●</span> Available for Graphic Design Internship</div>
+<h1>Apeksha<br><em>Shetkar.</em></h1>
+<p class="hero-sub">Electronics & Computer Engineering Student → Full-Stack Developer → Aspiring Graphic Designer who builds secure & beautiful products.</p>
+<nav>
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+<a href="#certifications">Certs</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    
-    <div class="project">
-      <h3>MPA Complaint Portal</h3>
-      <p>Full-stack complaint management system using React.js, Node.js, Express.js, and MongoDB.</p>
-      <button style="background:#757575; color:white; padding:10px 18px; border:none; border-radius:5px; cursor:default;">Collaborative Project - Code on Request</button>
-      <p style="font-size:12px; color:#666; margin-top:5px;">Team Internship Project | Role: Frontend & DB</p>
-    </div>
+<section id="about">
+<h2>About <i>Me.</i></h2>
+<div class="about-grid">
+<div class="about-text">
+<p>I am an Electronics and Computer Engineering student with hands‑on experience as a Full‑Stack Developer and Industrial Systems Engineering Intern at Mormugao Port Authority. My background spans building scalable web applications and applying modern frameworks like React.js, Node.js, MongoDB.</p>
+<p style="margin-top:15px">Beyond development, I'm diving into Graphic Design & UI/UX — learning to make technology not just work, but look and feel amazing. I have a strong interest in cybersecurity and ethical hacking (NPTEL certified).</p>
+<p style="margin-top:15px">I thrive on bridging hardware and software, from FPGA programming to full‑stack deployment, while exploring how AI/ML and good design can shape smarter, safer systems.</p>
+</div>
+<div class="skill-box">
+<h4>Tools & Stack</h4>
+<div>
+<span class="pill">Figma</span><span class="pill">Photoshop</span><span class="pill">Illustrator</span><span class="pill">Canva</span>
+<span class="pill">React.js</span><span class="pill">Node.js</span><span class="pill">MongoDB</span>
+<span class="pill">Python</span><span class="pill">Java</span><span class="pill">PHP</span>
+<span class="pill">Ethical Hacking</span><span class="pill">UI/UX</span>
+</div>
+<p style="margin-top:20px;font-size:12px;opacity:0.6">Looking for Graphic Design Internship where I can bring my tech + design mindset.</p>
+</div>
+</div>
+</section>
 
-    <div class="project">
-      <h3>Railway Management System</h3>
-      <p>Java + MySQL project for managing railway bookings and schedules.</p>
-      <button style="background:#757575; color:white; padding:10px 18px; border:none; border-radius:5px; cursor:default;">Collaborative Project - Code on Request</button>
-      <p style="font-size:12px; color:#666; margin-top:5px;">Team Academic Second Year Project | Role: UI & Integration</p>
-    </div>
+<section id="projects">
+<h2>Projects <i>— Selected Works</i></h2>
+<div class="project-grid">
 
-    <div class="project">
-      <h3>Blood Donation Website</h3>
-      <p>PHP, HTML, CSS, JavaScript-based platform for connecting donors and recipients.</p>
-      <a href="https://github.com/apekshashetkar/blooddonation" target="_blank" style="text-decoration:none;">
-        <button style="background:#2196F3; color:white; padding:10px 18px; border:none; border-radius:5px; margin-right:8px; cursor:pointer;">View Code</button>
-      </a>
-      <a href="BLOODDONATIONBYAP.pdf" target="_blank" style="text-decoration:none;">
-        <button style="background:#e53935; color:white; padding:10px 18px; border:none; border-radius:5px; cursor:pointer;">View Demo PDF</button>
-      </a>
-    </div>
+<!-- PIMSync - Kilowott Hackathon - Highlighted -->
+<div class="project">
+<span class="badge badge-hack">🏆 Kilowott Goa Hackathon Project</span>
+<h3>PIMSync</h3>
+<p>Built during <b>Kilowott Goa Hackathon</b> — Personal Information Management Sync platform centralizing contacts, tasks & calendars with secure cross-device sync, conflict resolution & offline-first support. Privacy-focused alternative to cloud PIMs.</p>
+<p style="font-size:12px;margin-top:10px;opacity:0.8"><b>Python • Sync Engine • Privacy-Focused • Offline-First</b><br>• Bidirectional sync<br>• Conflict detection & resolution<br>• Modular adapter architecture<br>• 24hr hackathon sprint</p>
+<a href="https://github.com/apekshashetkar/pimsync" target="_blank" class="btn btn-black">View on GitHub →</a>
+</div>
 
-    <div class="project">
-      <h3>PIMSync</h3>
-      <p>PIMSync is a Personal Information Management Sync platform that centralizes contacts, tasks, and calendars with secure cross-device synchronization, conflict resolution, and offline-first support.</p>
-      <p style="font-size:13px; color:#555;"><b>Tech Stack:</b> Python, Sync Engine, Privacy-Focused, Offline-First</p>
-      <ul style="font-size:14px; margin-top:10px;">
-        <li>Bidirectional sync for contacts & calendars</li>
-        <li>Conflict detection & resolution</li>
-        <li>Modular adapter architecture</li>
-      </ul>
-      <a href="https://github.com/apekshashetkar/pimsync" target="_blank" style="text-decoration:none;">
-        <button style="background:#2196F3; color:white; padding:10px 18px; border:none; border-radius:5px; cursor:pointer;">View Code on GitHub</button>
-      </a>
-    </div>
+<div class="project">
+<span class="badge badge-light">Internship Project</span>
+<h3>MPA Complaint Portal</h3>
+<p>Full-stack complaint management system using React.js, Node.js, Express.js, and MongoDB for Mormugao Port Authority.</p>
+<p style="font-size:11px;margin-top:12px;opacity:0.7">Collaborative | Frontend & DB</p>
+</div>
 
-    <div class="project">
-      <span style="background:#ff9800; color:white; padding:4px 10px; border-radius:20px; font-size:12px;">🚀 Final Year Project - In Progress</span>
-      <h3 style="margin-top:10px;">Intelligent Passive Drone Detection and Tracking System using SDR and AI</h3>
-      <p>Final year project focused on passive detection and tracking of unauthorized drones using Software Defined Radio (SDR) and AI. The system captures and analyzes RF signals, drone telemetry, and control links to identify and localize drones without active emission. Involves RF spectrogram analysis, signal classification, and AI-based drone fingerprinting.</p>
-      <p style="font-size:13px; color:#555;"><b>Tech Stack:</b> SDR (RTL-SDR / HackRF), Python, AI/ML, DSP, GNU Radio, TensorFlow, RF Signal Processing</p>
-      <button style="background:#9c27b0; color:white; padding:10px 18px; border:none; border-radius:5px; margin-right:8px;">Ongoing</button>
-      <a href="https://github.com/apekshashetkar" target="_blank" style="text-decoration:none;">
-        <button style="background:#2196F3; color:white; padding:10px 18px; border:none; border-radius:5px; cursor:pointer;">View Research</button>
-      </a>
-    </div>
+<div class="project">
+<span class="badge badge-dark">Academic Project</span>
+<h3>Railway Management System</h3>
+<p>Java + MySQL project for managing railway bookings and schedules with clean UI & integration.</p>
+<p style="font-size:11px;margin-top:12px;opacity:0.6">Second Year | UI & Integration</p>
+</div>
 
-  </section>
+<div class="project">
+<span class="badge badge-light">Web Development</span>
+<h3>Blood Donation Website</h3>
+<p>PHP, HTML, CSS, JS platform connecting donors and recipients. Designed for quick access in emergencies.</p>
+<a href="https://github.com/apekshashetkar/blooddonation" target="_blank" class="btn btn-white">View Code</a>
+<a href="BLOODDONATIONBYAP.pdf" target="_blank" class="btn btn-outline" style="color:#fff;border-color:#fff">Demo PDF</a>
+</div>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="certificates/ethical-hacking.pdf" target="_blank">NPTEL: Ethical Hacking</a></li>
-      <li><a href="./certificates/AI IN HUMAN RESOURCE.pdf" target="_blank">NPTEL: AI in Human Resource Management</a></li>
-      <li><a href="./certificates/WEB-TECH-PCCE.jpg" target="_blank">Web Technology – PCCE (Webloze)</a></li>
-      <li><a href="./certificates/Full-Stack-Software-Developer-Industrial-Systems-MPA-GOA.jpg" target="_blank">Full-Stack Software Developer and Industrial Systems (MPA GOA)</a></li>
-    </ul>
-  </section>
+<div class="project">
+<span class="badge badge-light">🚀 Final Year Project - In Progress</span>
+<h3>Intelligent Passive Drone Detection using SDR and AI</h3>
+<p>Passive detection & tracking of unauthorized drones using SDR & AI. Captures RF signals, telemetry & control links to identify & localize drones without active emission. RF spectrogram analysis + AI drone fingerprinting.</p>
+<p style="font-size:12px;margin-top:10px"><b>Tech:</b> SDR (RTL-SDR / HackRF), Python, AI/ML, DSP, GNU Radio, TensorFlow, RF Signal Processing</p>
+</div>
 
-  <section id="internship">
-    <h2>Internship Experience</h2>
-    <h3>Full Stack Developer & Industrial Systems Intern – MPA Goa</h3>
-    <p style="color: #666;">Mormugao Port Authority, Goa | August 2026 - September 2026</p>
-    <ul>
-      <li><a href="./certificates/MPA-GOA-INTERNSHIP.jpg" target="_blank">View Internship Certificate</a></li>
-    </ul>
-    <h3>AI for Sustainability Virtual Intern - 1M1B / AICTE / IBM SkillsBuild</h3>
-    <p style="color: #666;">1M1B in collaboration with AICTE & IBM | August 2026 - Present</p>
-    <ul>
-      <li><a href="./certificates/1M1B-AI-Sustainability-Internship.pdf" target="_blank">View Internship Offer Letter</a></li>
-    </ul> 
-  </section>
+</div>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:11.apeksha@gmail.com">11.apeksha@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/apeksha-shetkar88" target="_blank">linkedin.com/in/apeksha-shetkar88</a></p>
-    <p>GitHub: <a href="https://github.com/apekshashetkar" target="_blank">github.com/apekshashetkar</a></p>
-    <a href="./Resume.pdf" download class="btn">Download Resume</a>
-  </section>
+<section id="certifications">
+<h2>Certs <i>& Internships</i></h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+<div class="card-simple">
+<h4 style="font-family:'Syne';margin-bottom:10px">Certifications</h4>
+<ul style="margin-left:18px;font-size:14px">
+<li><a href="certificates/ethical-hacking.pdf" target="_blank">NPTEL: Ethical Hacking</a></li>
+<li><a href="./certificates/AI IN HUMAN RESOURCE.pdf" target="_blank">NPTEL: AI in Human Resource Management</a></li>
+<li><a href="./certificates/WEB-TECH-PCCE.jpg" target="_blank">Web Technology – PCCE</a></li>
+<li><a href="./certificates/Full-Stack-Software-Developer-Industrial-Systems-MPA-GOA.jpg" target="_blank">Full-Stack Developer (MPA GOA)</a></li>
+</ul>
+</div>
+<div class="card-simple">
+<h4 style="font-family:'Syne';margin-bottom:10px">Internships</h4>
+<p style="font-size:14px"><b>Full Stack Developer & Industrial Systems</b><br><span style="font-size:12px;color:#666">MPA Goa | Aug-Sep 2026</span><br><a href="./certificates/MPA-GOA-INTERNSHIP.jpg" target="_blank" style="font-size:12px">Certificate →</a></p>
+<p style="font-size:14px;margin-top:15px"><b>AI for Sustainability</b><br><span style="font-size:12px;color:#666">1M1B / AICTE / IBM | Aug 2026 - Present</span><br><a href="./certificates/1M1B-AI-Sustainability-Internship.pdf" target="_blank" style="font-size:12px">Offer Letter →</a></p>
+</div>
+</div>
+</section>
 
-  <footer>
-    <p>© 2026 Apeksha Shetkar | Portfolio</p>
-  </footer>
+<section id="contact">
+<h2>Contact <i>— Let's Talk</i></h2>
+<div class="card-simple" style="background:#111;color:#fff;border:none">
+<p>Email: <a href="mailto:11.apeksha@gmail.com" style="color:var(--yellow)">11.apeksha@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/apeksha-shetkar88" target="_blank" style="color:#fff">linkedin.com/in/apeksha-shetkar88</a></p>
+<p>GitHub: <a href="https://github.com/apekshashetkar" target="_blank" style="color:#fff">github.com/apekshashetkar</a></p>
+<a href="./Resume.pdf" download class="btn btn-white" style="margin-top:15px">Download Resume ↓</a>
+</div>
+</section>
+
+<footer>
+<p><strong>Apeksha Shetkar</strong> — Graphic Designer + Developer + Cybersecurity</p>
+<p style="margin-top:8px">© 2026 • Designed with intent • Built with code</p>
+</footer>
+
 </body>
 </html>
