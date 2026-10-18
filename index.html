@@ -30,8 +30,12 @@ h2 i{font-style:normal;color:var(--pink)}
 .project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
 .project{border-radius:24px;padding:28px;position:relative;overflow:hidden;transition:0.3s}
 .project:hover{transform:translateY(-4px)}
-.project h3{font-family:'Syne',sans-serif;font-size:22px;margin-bottom:10px}
-.project p{font-size:14px;line-height:1.6}
+.project:nth-child(1){grid-column:span 12;background:#FFFBF5;border:2px solid #111;color:#111}
+.project:nth-child(2){grid-column:span 7;background:#FFE135;color:#111}
+.project:nth-child(3){grid-column:span 5;background:#111;color:#fff}
+.project:nth-child(4){grid-column:span 5;background:#fff;border:2px solid #111;color:#111}
+.project:nth-child(5){grid-column:span 7;background:linear-gradient(135deg,#7C3AED,#FF4E88);color:#fff}
+.project:nth-child(6){grid-column:span 12;background:#00D09C;color:#111}
 .badge{display:inline-block;padding:4px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.5px;margin-bottom:12px;text-transform:uppercase}
 .badge-dark{background:#111;color:#fff}
 .badge-light{background:#fff;color:#111;border:1px solid #111}
@@ -46,19 +50,18 @@ h2 i{font-style:normal;color:var(--pink)}
 footer{background:#111;color:#666;text-align:center;padding:40px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
 footer strong{color:#fff}
 .sticker-card{display:flex;gap:25px;align-items:center}
-.sticker-img{width:280px;min-width:280px;height:380px;object-fit:cover;border-radius:18px;border:2px solid #111;background:#FFFBF5}
+.sticker-img{width:300px;min-width:300px;height:400px;object-fit:contain;border-radius:18px;border:2px solid #111;background:#FFFBF5;padding:10px}
 @media(max-width:800px){
 .hero h1{font-size:44px}
 .about-grid{grid-template-columns:1fr}
 .project-grid{grid-template-columns:1fr}
-.project:nth-child(n){grid-column:span 1 !important}
+.project:nth-child(n){grid-column:span 1}
 .sticker-card{flex-direction:column}
 .sticker-img{width:100%;min-width:0;height:auto}
 }
 </style>
 </head>
 <body>
-<!-- header + all sections same as yours, with NEW project added at top -->
 <header>
 <div class="hero">
 <h1>Apeksha<br><em>Shetkar.</em></h1>
@@ -71,50 +74,117 @@ footer strong{color:#fff}
 </nav>
 </div>
 </header>
-<section id="projects">
-<h2>Projects <i>— Selected Works</i></h2>
-<div class="project-grid">
-<div class="project" style="grid-column:span 12;background:#FFFBF5;border:2px solid #111;color:#111;">
-<div class="sticker-card">
-<img src="kawaii-sticker-sheet.png" alt="Kawaii Food Sticker Sheet" class="sticker-img">
+
+<section id="about">
+<h2>About <i>Me.</i></h2>
+<div class="about-grid">
+<div class="about-text">
+<p>I am an Electronics and Computer Engineering student with hands‑on experience as a Full‑Stack Developer and Industrial Systems Engineering Intern at Mormugao Port Authority. My background spans building scalable web applications and applying modern frameworks such as React.js, Node.js, and MongoDB.</p>
+<p style="margin-top:15px">I have hands-on experience in Graphic Design and UI/UX, with practical work in poster design, social media creatives using Figma, Adobe Illustrator, Photoshop, and Canva. My focus is on making technology more human, intuitive, and visually compelling — merging my engineering background with design thinking.</p>
+<p style="margin-top:15px">I also have a strong interest in cybersecurity and ethical hacking.</p>
+</div>
+<div class="skill-box">
+<h4>Tools & Stack</h4>
 <div>
-<span class="badge badge-dark">✨ NEW • Graphic Design • Canva</span>
-<h3>Kawaii Food Sticker Sheet</h3>
-<p>Designed a printable 3x3 kawaii food sticker sheet featuring sushi, burger, onigiri, dumplings, fries, ramen, boba & mochi. Created in Canva with pastel palette, centered composition, and white outline sticker effect.</p>
-<p style="font-size:12px;margin-top:12px;opacity:0.8"><b>Tools:</b> Canva • Print Design<br>• 9 characters • Pastel theory • Print-ready PNG</p>
-<a href="kawaii-sticker-sheet.png" target="_blank" class="btn btn-black">View Full Sheet →</a>
-<a href="kawaii-sticker-sheet.png" download class="btn btn-outline" style="color:#111;border-color:#111">Download PNG ↓</a>
+<span class="pill">Figma</span><span class="pill">Photoshop</span><span class="pill">Adobe Illustrator</span><span class="pill">Canva</span><span class="pill">Poster Design</span><span class="pill">Branding</span>
+<span class="pill">React.js</span><span class="pill">Node.js</span><span class="pill">MongoDB</span>
+<span class="pill">Python</span><span class="pill">Java</span><span class="pill">PHP</span>
+<span class="pill">UI/UX</span><span class="pill">Ethical Hacking</span>
 </div>
-</div>
-</div>
-<!-- your other 5 projects below remain exactly same -->
-<div class="project" style="grid-column:span 7;background:#FFE135;color:#111">
-<span class="badge badge-hack">🏆 Kilowott Goa Hackathon Project</span>
-<h3>PIMSync</h3>
-<p>Built during Kilowott Goa Hackathon — PIM Sync platform...</p>
-<a href="https://github.com/apekshashetkar/pimsync" target="_blank" class="btn btn-black">View on GitHub →</a>
-</div>
-<div class="project" style="grid-column:span 5;background:#111;color:#fff">
-<span class="badge badge-light">Internship Project</span>
-<h3>MPA Complaint Portal</h3>
-<p>Full-stack complaint management system...</p>
-</div>
-<div class="project" style="grid-column:span 5;background:#fff;border:2px solid #111;color:#111">
-<span class="badge badge-dark">Academic Project</span>
-<h3>Railway Management System</h3>
-<p>Java + MySQL project...</p>
-</div>
-<div class="project" style="grid-column:span 7;background:linear-gradient(135deg,#7C3AED,#FF4E88);color:#fff">
-<span class="badge badge-light">Web Development</span>
-<h3>Blood Donation Website</h3>
-<p>PHP, HTML, CSS, JS platform...</p>
-</div>
-<div class="project" style="grid-column:span 12;background:#00D09C;color:#111">
-<span class="badge badge-light">🚀 Final Year Project - In Progress</span>
-<h3>Intelligent Passive Drone Detection using SDR and AI</h3>
-<p>Passive detection & tracking of unauthorized drones...</p>
 </div>
 </div>
 </section>
+
+<section id="projects">
+<h2>Projects <i>— Selected Works</i></h2>
+<div class="project-grid">
+
+<div class="project">
+<div class="sticker-card">
+<img src="kawaii sticker.png" alt="Kawaii Food Sticker Sheet" class="sticker-img">
+<div>
+<span class="badge badge-dark">✨ NEW • Graphic Design • Canva</span>
+<h3>Kawaii Food Sticker Sheet</h3>
+<p>Designed a printable 3x3 kawaii food sticker sheet featuring sushi, burger, onigiri, dumplings, fries, ramen, boba & mochi. Created in Canva with pastel palette, centered composition, and white outline sticker effect for die-cut printing.</p>
+<p style="font-size:12px;margin-top:12px;opacity:0.8"><b>Tools:</b> Canva • Kawaii Illustration • Print Design<br>• 9 custom characters • Pastel color theory • Print-ready PNG</p>
+<a href="kawaii sticker.png" target="_blank" class="btn btn-black">View Full Sheet →</a>
+<a href="kawaii sticker.png" download class="btn btn-outline" style="color:#111;border-color:#111">Download PNG ↓</a>
+</div>
+</div>
+</div>
+
+<div class="project">
+<span class="badge badge-hack">🏆 Kilowott Goa Hackathon Project</span>
+<h3>PIMSync</h3>
+<p>Built during <b>Kilowott Goa Hackathon</b> — Personal Information Management Sync platform centralizing contacts, tasks & calendars with secure cross-device sync, conflict resolution & offline-first support.</p>
+<a href="https://github.com/apekshashetkar/pimsync" target="_blank" class="btn btn-black">View on GitHub →</a>
+</div>
+
+<div class="project">
+<span class="badge badge-light">Internship Project</span>
+<h3>MPA Complaint Portal</h3>
+<p>Full-stack complaint management system using React.js, Node.js, Express.js, and MongoDB for Mormugao Port Authority.</p>
+<div class="request-note">🔒 Code available only on request</div>
+</div>
+
+<div class="project">
+<span class="badge badge-dark">Academic Project</span>
+<h3>Railway Management System</h3>
+<p>Java + MySQL project for managing railway bookings and schedules with clean UI & integration.</p>
+<div class="request-note request-note-light">🔒 Code available only on request</div>
+</div>
+
+<div class="project">
+<span class="badge badge-light">Web Development</span>
+<h3>Blood Donation Website</h3>
+<p>PHP, HTML, CSS, JS platform connecting donors and recipients. Designed for quick access in emergencies.</p>
+<a href="https://github.com/apekshashetkar/blooddonation" target="_blank" class="btn btn-white">View Code</a>
+<a href="BLOODDONATIONBYAP.pdf" target="_blank" class="btn btn-outline" style="color:#fff;border-color:#fff">Demo PDF</a>
+</div>
+
+<div class="project">
+<span class="badge badge-light">🚀 Final Year Project - In Progress</span>
+<h3>Intelligent Passive Drone Detection using SDR and AI</h3>
+<p>Passive detection & tracking of unauthorized drones using SDR & AI. Captures RF signals, telemetry & control links to identify & localize drones without active emission.</p>
+</div>
+
+</div>
+</section>
+
+<section id="certs">
+<h2>Certs <i>& Internships</i></h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+<div class="card-simple">
+<h4 style="font-family:'Syne';margin-bottom:10px">Certifications</h4>
+<ul style="margin-left:18px;font-size:14px;line-height:1.8">
+<li><a href="certificates/ethical-hacking.pdf" target="_blank">NPTEL: Ethical Hacking</a></li>
+<li><a href="./certificates/AI IN HUMAN RESOURCE.pdf" target="_blank">NPTEL: AI in HRM</a></li>
+<li><a href="./certificates/WEB-TECH-PCCE.jpg" target="_blank">Web Technology – PCCE</a></li>
+<li><a href="./certificates/Full-Stack-Software-Developer-Industrial-Systems-MPA-GOA.jpg" target="_blank">Full-Stack Developer (MPA GOA)</a></li>
+</ul>
+</div>
+<div class="card-simple">
+<h4 style="font-family:'Syne';margin-bottom:15px">Internships</h4>
+<p style="font-size:15px"><b>Full Stack Developer - MPA Goa</b><br><span style="font-size:13px;color:#666">Aug-Sep 2026</span><br><a href="./certificates/MPA-GOA-INTERNSHIP.jpg" target="_blank" style="font-size:12px">Certificate →</a></p>
+<p style="font-size:15px;margin-top:18px"><b>AI for Sustainability - 1M1B / IBM</b><br><span style="font-size:13px;color:#666">Aug 2026 - Present</span><br><a href="./certificates/1M1B-AI-Sustainability-Internship.pdf" target="_blank" style="font-size:12px">Offer Letter →</a></p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact <i>— Let's Talk</i></h2>
+<div class="card-simple" style="background:#111;color:#fff;border:none">
+<p>Email: <a href="mailto:11.apeksha@gmail.com" style="color:var(--yellow)">11.apeksha@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/apeksha-shetkar88" target="_blank" style="color:#fff">linkedin.com/in/apeksha-shetkar88</a></p>
+<p>GitHub: <a href="https://github.com/apekshashetkar" target="_blank" style="color:#fff">github.com/apekshashetkar</a></p>
+<a href="./Resume.pdf" download class="btn btn-white" style="margin-top:15px">Download Resume ↓</a>
+</div>
+</section>
+
+<footer>
+<p><strong>Apeksha Shetkar</strong> — Graphic Designer + Developer + Cybersecurity</p>
+<p style="margin-top:8px">© 2026 • Designed with intent • Built with code</p>
+</footer>
+
 </body>
 </html>
